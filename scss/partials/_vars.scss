@@ -1,0 +1,32 @@
+$azul-oscuro: #3E799B;
+$azul-clarito:#4b93bd;
+$piel-clarito: #E6CCA7;
+$piel-medio: #E7A588;
+$piel-oscuro: #BB8466;
+$tostado: #684c31;
+$tostado-oscuro: #332518;
+$verde: rgb(62, 83, 62);
+$tostado-medio:#492c12;
+
+$fonts: (
+    S: 20px,
+    M: 30px,
+    L: 50px,
+);
+$borders: (
+    verde: $verde solid 20px,
+   marron: $tostado solid 20px,
+   marronchico: $tostado solid 10px,
+   azul: $azul-oscuro solid 20px,
+   piel: $piel-medio solid 20px,
+   pielote: $piel-oscuro solid 20px,
+   tostadote: $tostado-oscuro solid 20px,
+   azulchico: $azul-oscuro solid 10px,
+);
+$paddings: (
+    XS: 5px 5px 5px 5px,
+    S: 15px 15px 15px 15px,
+    M: 20px 30px 20px 30px,
+    L: 40px 50px 40px 50px,
+    XL: 90px 90px 90px 90px,
+);

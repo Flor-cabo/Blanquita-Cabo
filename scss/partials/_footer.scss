@@ -1,0 +1,33 @@
+@import "./vars";
+
+.footer {
+    border-top: solid 20px #4B4237;
+    border-bottom: solid 20px #4B4237;
+    border-right: solid 20px;
+    border-left: solid 20px;
+    padding: 50px 60px 50px 60px;
+    width: 100%;
+    background-color: $azul-oscuro;
+    justify-content: space-between; 
+
+    &__link {
+        font-size: 20px;
+        align-content: left;
+        color: $piel-clarito; }
+      
+    &__logo {
+        width: 100px;
+        height: 100px;
+        align-content: center;
+        bottom: 20px; }
+      
+    &__datosDeContacto {
+        font-size: 20px;
+        align-content: right;
+        color: $piel-clarito; }
+      
+      @media screen and (max-width: 768px) {
+        .header, .main, .hero, .body, .footer {
+          flex-wrap: wrap; } }
+}
+  

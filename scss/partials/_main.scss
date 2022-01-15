@@ -1,0 +1,39 @@
+@import "./vars";
+
+.main {
+    display:flex;
+    justify-content: space-around;
+    border-right: $azul-oscuro solid 20px;
+    border-left: $azul-oscuro solid 20px;
+    border-top: #684c31 solid 16px;
+    border-bottom: #684c31 solid 8px;
+    height: 100px;
+    background-color: $piel-clarito; 
+
+    &__contenedorIzq{
+        display:flex;
+        justify-content: space-around;
+        height: 100%;
+        width:30%;
+    }
+
+    &__contenedorTitulo{
+        display:flex;
+        justify-content: space-around;
+        text-align: center;
+        height: 100%;
+        width:40%;
+    }
+
+    &__contenedorDer{
+        display:flex;
+        justify-content: space-around;
+        height: 100%;
+        width:30%;
+    }
+
+    &__titulo {
+        font-size: 25px;
+        color: $azul-oscuro; }
+}
+

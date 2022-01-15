@@ -1,0 +1,35 @@
+@import "./vars";
+
+.form{
+    background-color: $azul-oscuro;
+    padding: 30px 80px 30px 80px;
+    border-right: map-get($borders, tostadote);
+    border-left: map-get($borders, tostadote);
+    border-bottom: map-get($borders, tostadote);
+
+    &__titulo{
+        text-align: center;
+        font-size: map-get($fonts, L);
+        color: $tostado-oscuro;
+    }
+
+    &__row{
+        padding:map-get($paddings, M);
+        background-color: $azul-clarito;
+    }
+
+    &-control{
+        background-color: $piel-clarito;
+        border-top: solid 8px $piel-oscuro;
+        border-bottom:solid 8px $piel-oscuro;
+        border-right:solid 8px $piel-oscuro;
+        border-left:solid 8px $piel-oscuro;
+    }
+    
+    &__button{
+        margin:10px;
+        padding: map-get($paddings, S);
+        background-color: #8f0b0b;
+        color: $piel-clarito;
+    }
+}

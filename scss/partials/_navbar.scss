@@ -1,0 +1,49 @@
+@import "./vars";
+
+.main__navContenedor {
+    height: 10vh;
+    background-color: $azul-oscuro;
+    justify-content: space-around; }
+  
+.navbar {
+    color: $piel-clarito;
+    background-color: $azul-oscuro;
+    justify-content: space-around; 
+
+    & .navbar-nav .nav-link {
+        color: $piel-clarito;
+        transition: color 2s; 
+    
+        &:hover {
+            color: #8f0b0b;}
+        }
+}
+
+.navbar-toggler{
+    background: $piel-medio;
+}
+
+.color-change-2x {
+    -webkit-animation: color-change-2x 2s linear infinite alternate both;
+    animation: color-change-2x 2s linear infinite alternate both; }
+  
+@-webkit-keyframes color-change-2x {
+    0% {
+      background: $azul-oscuro; }
+    100% {
+      background: #1a6591; } }
+  
+@keyframes color-change-2x {
+    0% {
+      background: $azul-oscuro; }
+    100% {
+      background: #1a6591; } }
+  
+.navbar-nav {
+    width: 100%;
+    justify-content: space-around; }
+  
+.navbar-item {
+    padding-right: 10px;
+    padding-left: 10px; }
+

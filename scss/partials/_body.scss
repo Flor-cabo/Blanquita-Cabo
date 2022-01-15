@@ -1,0 +1,460 @@
+@import "./vars";
+
+/* declaro mixins que voy a usar en los distintos bodys */
+
+@mixin textoConstruccion{
+    height:100%;
+    width: 100%;
+    background-color: #BB8466;
+    padding: 40px;
+}
+
+@mixin imgsB{
+    padding: map-get($paddings,S);
+    margin: auto;
+    display: block;
+    height: 220px;
+    width: 220px; 
+}
+
+@mixin imgsS{
+    margin: auto;
+    display: block;
+    height: 150px;
+    width: 150px;
+}
+
+@mixin bordecito{
+    border-right: map-get($borders,azulchico);
+    border-left: map-get($borders,azulchico);
+}
+
+/* Empieza el body del Index */
+
+.bodyIndex {
+    border-top: map-get($borders, marron);
+    background-color: $azul-oscuro;
+    border-bottom: map-get($borders, piel);
+    
+    &Izq {
+      border-left: map-get($borders, azul);
+      height: 550px;
+      margin: 0,5rem;
+      padding: map-get($paddings, L);
+      text-align: center;
+      background-color: $tostado; 
+  
+      &__imagenMartinybelen {
+          height: 200px;
+          width: 200px;
+          display: block;
+          margin: auto; }
+  
+      &__titulo {
+          padding-top: 100px;
+          color: $piel-clarito; }
+        
+      &__texto {
+          font-size: map-get($fonts,S);
+          color: $piel-clarito; }
+  
+      &__top {
+          padding: map-get($paddings,M);
+          background-color: $piel-oscuro;
+          border-bottom: $piel-medio;
+          font-size: map-get($fonts,L);
+          border-left: map-get($borders, azul);
+        }
+  
+      &__bottom {
+          border-left: map-get($borders, azul);
+          height: 270px;
+          background-color: $piel-oscuro;
+          margin: auto;
+          padding: map-get($paddings,L);
+          display: flex; }
+  
+      &__imagenMartin {
+          @include imgsS; }
+        
+      &__imagenBelen {
+          @include imgsS; }
+  }
+    
+    &Der {
+      @extend .bodyIndexIzq;
+      border-left:none;
+      border-right: map-get($borders,azul);
+      justify-content: space-around;
+  
+      &__titulo {
+          color: $tostado; }
+  
+      &__top {
+          border-right: map-get($borders,azul);
+          height: 240px;
+          background-color: $piel-oscuro;
+          text-align: center;
+          padding: map-get($paddings,XL); }
+  
+      &__1img {
+        @include imgsB;
+     }
+        
+      &__2img {
+          @include imgsB;
+        }
+        
+      &__bottom {
+          border-right: map-get($borders,azul);
+          padding:map-get($paddings,M);
+          background-color: $piel-oscuro;
+          height: 270px;
+          text-align: center;
+          font-size: map-get($fonts,S);
+          padding-top: 120px;
+          padding-bottom: 100px; }
+        
+      &__linkBottom {
+          color: $tostado; }  
+      }
+  }
+  .color-change-3x {
+    -webkit-animation: color-change-3x 5s linear infinite alternate both;
+    animation: color-change-3x 5s linear infinite alternate both; }
+  
+  @-webkit-keyframes color-change-3x {
+    0% {
+      background: $piel-oscuro; }
+    0% {
+      background: $tostado; }
+    100% {
+      background: $piel-oscuro; } }
+  
+  @keyframes color-change-3x {
+    0% {
+      background: $piel-oscuro; }
+    50% {
+      background: $tostado; }
+    100% {
+      background: $piel-oscuro; } 
+}
+
+.bodyConstruccion{
+    padding: 50px 60px 50px 60px;
+    border-top: solid 20px #E7A588;
+    border-right: solid 20px #3E799B;
+    border-left: solid 20px #3E799B;
+    border-bottom: solid 20px#E7A588;
+    margin: 0,5rem;
+    height:auto;
+    background-color: #4B4237;
+        
+&__imagen1{
+    height:100%;
+    width: 100%;
+}
+
+&__imagen2{
+    height:100%;
+    width: 100%;
+}
+
+&__imagen3{
+    height:100%;
+    width: 100%;
+}
+
+&__texto1{
+    @include textoConstruccion;
+}
+&__texto2{
+    @include textoConstruccion;
+}
+
+&__texto3{
+    @include textoConstruccion;
+}
+
+&__section{
+    padding:40px 40px 40px 40px;
+    background-color:#3E799B;
+}
+}
+
+/* Responsive del body del index */
+
+@media (max-width: 768px) {
+    .bodyIndexIzq{
+        border-right: $azul-oscuro solid 20px;
+        padding: 15px 15px 15px 15px;
+        font-size: 20px;
+        height:500px;
+
+        &__top{
+            border-right: map-get($borders, azul);
+        }
+        
+        &__imagenMartinybelen {
+            @include imgsS;
+         }
+
+        &__bottom{
+            border-right: $azul-oscuro solid 20px;
+            padding: 15px 15px 15px 15px;
+        }
+        &__imagenMartin {
+            margin: auto;
+            display: block;
+            height: 100px;
+            width: 100px; }
+          
+        &__imagenBelen {
+            margin: auto;
+            display: block;
+            height: 100px;
+            width: 100px; }
+    }
+    .bodyIndexDer{
+        border-left: $azul-oscuro solid 20px;
+        padding: 15px 15px 15px 15px;
+
+        &__top{
+            display:none;
+        }
+
+        &__bottom{
+            border-left: $azul-oscuro solid 20px;
+            padding: 15px 15px 15px 15px;
+            height:15vh;
+            font-size:20px;
+        }
+    }
+
+    /* Termina el body del index y empieza el body de la pagina construccion */
+
+    .bodyConstruccion{
+        padding: 15px 5px 15px 5px;
+        
+        &__imagen1{
+           border-right:map-get($borders, marronchico);
+           border-left: map-get($borders, marronchico);
+           border-bottom: map-get($borders, marronchico);
+        }
+        
+        &__imagen2{
+            border-right: map-get($borders, marronchico);
+           border-left: map-get($borders, marronchico);
+           border-top: map-get($borders, marronchico); 
+        }
+        
+        &__imagen3{
+            border-right:map-get($borders, marronchico);
+           border-left:map-get($borders, marronchico);
+           border-bottom: map-get($borders, marronchico);
+        }
+        
+        &__texto1{
+            border-right: map-get($borders, marronchico);
+           border-left: map-get($borders, marronchico);
+           border-top:map-get($borders, marronchico);
+        }
+        &__texto2{
+            border-right: map-get($borders, marronchico);
+           border-left: map-get($borders, marronchico);
+           border-bottom:map-get($borders, marronchico);
+        }
+        
+        &__texto3{
+            border-right:map-get($borders, marronchico);
+            border-left: map-get($borders, marronchico);
+            border-top: map-get($borders, marronchico);
+        }
+        }
+    }
+
+/* Termina el body de construccion y empieza el body de la pagina recorrido. */
+
+.bodyRecorrido{
+    background-color: $verde;
+    padding:map-get($paddings, L);
+    border-right: map-get($borders, tostadote);
+    border-left: map-get($borders, tostadote);
+    border-top: map-get($borders, tostadote);
+    border-bottom: map-get($borders, tostadote);
+        
+    &__recorridoHoy{
+            background-color: $piel-oscuro;
+            padding: map-get($paddings,L);
+
+            &-titulo{
+                height:60px;
+                text-align: center;
+                font-size:map-get($fonts, M);
+                color:$tostado-oscuro;
+            }
+        }
+    &__recorridoFuturo{
+            background-color: $tostado-oscuro;
+            padding:map-get($paddings, L);
+
+            &-contenedorDer{
+                padding: map-get($paddings, L);
+                justify-items: center;
+            }
+
+            &-titulo{
+                height:60px;
+                text-align: center;
+                color: $piel-oscuro;
+                font-size: map-get($fonts, M);
+            }
+            &-texto{
+                margin:1rem;
+                padding: map-get($paddings,L);
+                background-color: $tostado-medio;
+                color: $piel-oscuro;
+                font-size: map-get($fonts, S);
+            }
+            &-contenedorButton{
+                margin:1rem;
+                align-items: center;
+            }
+            &-button{
+                justify-self:center;
+                background-color: $piel-oscuro;
+                color: $tostado-oscuro;
+                height: 100px;
+                width:200px;
+            }
+            }
+        }
+
+/* Termina el body de la pag recorrido y empieza el body de la pagina mis-papas. */
+        
+.bodyPapas{
+    background-color: $azul-oscuro;
+    &__belenrow{
+        background-color: $piel-clarito;
+        border-top:map-get($borders, piel);
+        border-left:map-get($borders, azul);
+        border-right:map-get($borders, azul);
+        border-bottom:map-get($borders, piel);
+        padding:0;
+        }
+    &__martinrow{
+        background-color: $piel-medio;
+        border-top:map-get($borders, pielote);
+        border-left:map-get($borders, azul);
+        border-right:map-get($borders, azul);
+        border-bottom:map-get($borders, pielote);
+        padding:0;
+        }
+    &__martinybelenrow{
+        background-color: $piel-oscuro;
+        border-top:map-get($borders, marron);
+        border-left:map-get($borders,azul);
+        border-right:map-get($borders,azul);
+        border-bottom:map-get($borders,marron);
+        padding:0;
+        }
+    &__belencol{
+        @include bordecito();
+        padding:0;
+        }
+    &__martincol{
+        @include bordecito();
+        padding:0;
+        }
+    &__martinybelencol{
+        @include bordecito();
+        padding:0;
+        }
+    &__belentxt{
+        text-align: center;
+        color: $azul-oscuro;
+        padding: map-get($paddings, S);
+        }
+    &__martintxt{
+        text-align: center;
+        color: $azul-oscuro;
+        padding: map-get($paddings, S);
+        }
+    &__martinybelentxt{
+        text-align: center;
+        color: $azul-oscuro;
+        padding: map-get($paddings, S);
+        }
+    }
+
+/* Termina el body de la pag mis-papas y empieza el body de la pagina viaja-conmigo. */
+
+.bodyViajarjuntos{
+    background-color: $tostado;
+    padding:map-get($paddings, L);
+    border-left: map-get($borders,tostadote);
+    border-right: map-get($borders,tostadote);
+
+    &__titulo{
+        font-size: map-get($fonts,L);
+        color: $tostado-oscuro;
+        text-align: center;
+    }
+
+    &__rowtop{
+        background-color: $piel-oscuro;
+        padding: map-get($paddings,M );
+        border-top:map-get($borders, azul);
+        border-right:map-get($borders, azul);
+        border-left:map-get($borders, azul);
+    }
+
+    &__rowmid{
+        background-color: $piel-oscuro;
+        padding: map-get($paddings,M );
+        border-right:map-get($borders, azul);
+        border-left:map-get($borders, azul);
+    }
+
+    &__rowbottom{
+        background-color: $piel-oscuro;
+        padding: map-get($paddings,M );
+        border-bottom:map-get($borders, azul);
+        border-right:map-get($borders, azul);
+        border-left:map-get($borders, azul);
+    }
+
+    &__txt{
+        height: 35vh;
+        font-size: map-get($fonts,S);
+        color: $tostado-oscuro;
+        padding: map-get($paddings,XL);
+    }
+
+    &__col{
+        background-color: $piel-medio;
+    }
+    &__img{
+        height: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .bodyViajarjuntos{
+        &__titulo{
+            font-size: map-get($fonts,s);
+        }
+        &__img{
+            height: 70vh;
+        }
+        &__txt{
+            font-size: map-get($fonts,S);
+            color: $tostado-oscuro;
+            padding: map-get($paddings,S);
+        }
+        &__titulo{
+            font-size: map-get($fonts,L);
+            color: $tostado-oscuro;
+            text-align: center;
+        }
+    }
+}

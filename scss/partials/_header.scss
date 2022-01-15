@@ -1,0 +1,17 @@
+@import "./vars";
+
+.header {
+    display: flex;
+    height: 50vh;
+    background-image: url(/Imgs/San-Rafael.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-wrap: wrap; 
+
+    &__logo {
+        text-align: center;
+        width: 125px;
+        height: 125px;
+        margin: auto; 
+      }
+  }
