@@ -475,6 +475,18 @@
 }
 
 /* Termina el body de construccion y empieza el body de la pagina recorrido. */
+.carousel-control-prev-icon {
+  background-color: black;
+  height: 40px;
+  width: 40px;
+}
+
+.carousel-control-next-icon {
+  background-color: black;
+  height: 40px;
+  width: 40px;
+}
+
 .bodyRecorrido {
   background-color: #3e533e;
   padding: 40px 50px 40px 50px;
@@ -535,6 +547,37 @@
   color: #332518;
   height: 100px;
   width: 200px;
+}
+
+/* responsive del html recorrido */
+@media (max-width: 768px) {
+  .bodyRecorrido__recorridoHoy {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoHoy-Arg {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoHoy-Carousel {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoFuturo {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoFuturo-america {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoFuturo-contenedorDer {
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+  }
+  .bodyRecorrido__recorridoFuturo-texto {
+    margin: 0px;
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoFuturo-contenedorButton {
+    margin: 0rem;
+    padding: 5px 5px 5px 5px;
+  }
 }
 
 /* Termina el body de la pag recorrido y empieza el body de la pagina mis-papas. */
@@ -605,6 +648,55 @@
   padding: 15px 15px 15px 15px;
 }
 
+/* responsive del html mis-papas" */
+@media (max-width: 768px) {
+  .bodyPapas__belencol {
+    height: 40vh;
+    padding: 20px 30px 20px 30px;
+  }
+  .bodyPapas__martincol {
+    height: 40vh;
+    padding: 20px 30px 20px 30px;
+  }
+  .bodyPapas__martinybelencol {
+    height: 40vh;
+    padding: 20px 30px 20px 30px;
+  }
+  .bodyPapas__belentxt {
+    background-color: #3E799B;
+    color: #E6CCA7;
+  }
+  .bodyPapas__martintxt {
+    background-color: #3E799B;
+    color: #E7A588;
+  }
+  .bodyPapas__martinybelentxt {
+    background-color: #3E799B;
+    color: #BB8466;
+  }
+  .bodyPapas__belencoltxt {
+    background-color: #3E799B;
+  }
+  .bodyPapas__martincoltxt {
+    background-color: #3E799B;
+  }
+  .bodyPapas__martinybelencoltxt {
+    background-color: #3E799B;
+  }
+  .bodyPapas__belenrow {
+    border-left: solid 20px #E6CCA7;
+    border-right: solid 20px #E6CCA7;
+  }
+  .bodyPapas__martinrow {
+    border-left: solid 20px #E7A588;
+    border-right: solid 20px #E7A588;
+  }
+  .bodyPapas__martinybelenrow {
+    border-left: solid 20px #BB8466;
+    border-right: solid 20px #BB8466;
+  }
+}
+
 /* Termina el body de la pag mis-papas y empieza el body de la pagina viaja-conmigo. */
 .bodyViajarjuntos {
   background-color: #684c31;
@@ -629,21 +721,20 @@
 
 .bodyViajarjuntos__rowmid {
   background-color: #BB8466;
-  padding: 20px 30px 20px 30px;
+  padding: 15px 15px 15px 15px;
   border-right: #3E799B solid 20px;
   border-left: #3E799B solid 20px;
 }
 
 .bodyViajarjuntos__rowbottom {
   background-color: #BB8466;
-  padding: 20px 30px 20px 30px;
+  padding: 15px 15px 15px 15px;
   border-bottom: #3E799B solid 20px;
   border-right: #3E799B solid 20px;
   border-left: #3E799B solid 20px;
 }
 
 .bodyViajarjuntos__txt {
-  height: 35vh;
   font-size: 20px;
   color: #332518;
   padding: 90px 90px 90px 90px;
@@ -654,22 +745,31 @@
 }
 
 .bodyViajarjuntos__img {
-  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
+/* responsive del html Viaja-conmigo */
 @media (max-width: 768px) {
+  .bodyViajarjuntos {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyViajarjuntos__titulo {
+    color: #332518;
+    text-align: center;
+    font-size: 30px;
+  }
   .bodyViajarjuntos__img {
-    height: 70vh;
+    height: 45vh;
+    width: 100%;
+    border-right: #E7A588 solid 8px;
+    border-left: #E7A588 solid 8px;
+    border-bottom: #E7A588 solid 8px;
   }
   .bodyViajarjuntos__txt {
     font-size: 20px;
     color: #332518;
     padding: 15px 15px 15px 15px;
-  }
-  .bodyViajarjuntos__titulo {
-    font-size: 50px;
-    color: #332518;
-    text-align: center;
   }
 }
 
@@ -747,5 +847,17 @@
   padding: 15px 15px 15px 15px;
   background-color: #8f0b0b;
   color: #E6CCA7;
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 15px 15px 15px 15px;
+  }
+  .form__titulo {
+    font-size: 30px;
+  }
+  .form__row {
+    padding: 15px 15px 15px 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

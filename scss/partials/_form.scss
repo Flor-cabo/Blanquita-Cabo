@@ -33,3 +33,16 @@
         color: $piel-clarito;
     }
 }
+
+@media (max-width: 768px) {
+     .form{
+        padding: map-get($paddings, S);
+
+        &__titulo{
+            font-size: map-get($fonts, M);
+        }
+        &__row{
+            padding:map-get($paddings, S);
+        }   
+     }
+}

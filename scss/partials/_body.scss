@@ -275,6 +275,17 @@
 
 /* Termina el body de construccion y empieza el body de la pagina recorrido. */
 
+.carousel-control-prev-icon{
+    background-color:black;
+    height:40px;
+    width: 40px;
+}
+.carousel-control-next-icon{
+    background-color:black;
+    height: 40px;
+    width:40px;
+}
+
 .bodyRecorrido{
     background-color: $verde;
     padding:map-get($paddings, L);
@@ -329,6 +340,44 @@
             }
             }
         }
+
+/* responsive del html recorrido */
+
+@media (max-width: 768px) {
+    .bodyRecorrido{
+        &__recorridoHoy{
+
+            padding:map-get($paddings, S);
+
+            &-Arg{
+                padding:map-get($paddings, S);
+            }
+            &-Carousel{
+                padding:map-get($paddings, S);
+            }
+        }
+        &__recorridoFuturo{
+            padding:map-get($paddings, S);
+            &-america{
+                padding: map-get($paddings, S);
+            }
+
+            &-contenedorDer{ 
+                padding: map-get($paddings, S);
+                width:100%;
+            }
+            &-texto{
+                margin:0px;
+                padding: map-get($paddings,S);
+            }
+            &-contenedorButton{
+                margin:0rem;
+                padding: map-get($paddings,XS );
+            }
+        }
+    }
+}
+
 
 /* Termina el body de la pag recorrido y empieza el body de la pagina mis-papas. */
         
@@ -386,6 +435,58 @@
         padding: map-get($paddings, S);
         }
     }
+/* responsive del html mis-papas" */
+
+    @media (max-width: 768px) {
+
+        .bodyPapas{
+            &__belencol{
+                height: 40vh;
+                padding: map-get($paddings, M );
+            }
+            &__martincol{
+                height: 40vh;
+                padding: map-get($paddings, M );
+            }
+            &__martinybelencol{
+                height: 40vh;
+                padding: map-get($paddings, M );
+            }
+            &__belentxt{
+                background-color: $azul-oscuro;
+                color: $piel-clarito;
+            }
+            &__martintxt{
+                background-color: $azul-oscuro;
+                color: $piel-medio;
+            }
+            &__martinybelentxt{
+                background-color: $azul-oscuro;
+                color: $piel-oscuro;
+            }
+            &__belencoltxt{
+                background-color: $azul-oscuro;
+            }
+            &__martincoltxt{
+                background-color: $azul-oscuro;
+            }
+            &__martinybelencoltxt{
+                background-color: $azul-oscuro;
+            }
+            &__belenrow{
+                border-left: solid 20px $piel-clarito;
+                border-right:solid 20px $piel-clarito;
+                }
+            &__martinrow{
+                border-left: solid 20px $piel-medio;
+                border-right:solid 20px $piel-medio;
+                }
+            &__martinybelenrow{
+                border-left: solid 20px $piel-oscuro;
+                border-right:solid 20px $piel-oscuro;
+                }
+        }
+    }
 
 /* Termina el body de la pag mis-papas y empieza el body de la pagina viaja-conmigo. */
 
@@ -411,21 +512,20 @@
 
     &__rowmid{
         background-color: $piel-oscuro;
-        padding: map-get($paddings,M );
+        padding: map-get($paddings,S);
         border-right:map-get($borders, azul);
         border-left:map-get($borders, azul);
     }
 
     &__rowbottom{
         background-color: $piel-oscuro;
-        padding: map-get($paddings,M );
+        padding: map-get($paddings,S);
         border-bottom:map-get($borders, azul);
         border-right:map-get($borders, azul);
         border-left:map-get($borders, azul);
     }
 
     &__txt{
-        height: 35vh;
         font-size: map-get($fonts,S);
         color: $tostado-oscuro;
         padding: map-get($paddings,XL);
@@ -435,26 +535,33 @@
         background-color: $piel-medio;
     }
     &__img{
-        height: 100%;
+        padding:0;
+        margin:0;
     }
 }
+
+/* responsive del html Viaja-conmigo */
+
 @media (max-width: 768px) {
     .bodyViajarjuntos{
+        padding:map-get($paddings, S);
         &__titulo{
-            font-size: map-get($fonts,s);
+            color: $tostado-oscuro;
+            text-align: center;
+            font-size: map-get($fonts,M);
         }
         &__img{
-            height: 70vh;
+            height: 45vh;
+            width:100%;
+            border-right:map-get($borders, pielchico);
+            border-left:map-get($borders, pielchico );
+            border-bottom:map-get($borders, pielchico );
+        
         }
         &__txt{
             font-size: map-get($fonts,S);
             color: $tostado-oscuro;
             padding: map-get($paddings,S);
-        }
-        &__titulo{
-            font-size: map-get($fonts,L);
-            color: $tostado-oscuro;
-            text-align: center;
         }
     }
 }
