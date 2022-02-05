@@ -43,3 +43,21 @@
         background-color: #8f0b0b;
         height: 120px; }
 }
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    .hero {
+        &__contenedor {
+            padding: 35px 4px 4px 4px;
+            border-top: solid 7px $azul-oscuro;
+            border-bottom: solid 7px $azul-oscuro;
+            border-right: solid 7px $piel-medio;
+            border-left: solid 7px $piel-medio;
+            margin: 2px #684c31;
+            height:80vh;
+        }
+
+        &__button {
+            height: 70px;
+        }
+    }
+}

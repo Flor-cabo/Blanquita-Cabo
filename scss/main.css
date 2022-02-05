@@ -194,6 +194,21 @@
   height: 120px;
 }
 
+@media (min-width: 769px) and (max-width: 1000px) {
+  .hero__contenedor {
+    padding: 35px 4px 4px 4px;
+    border-top: solid 7px #3E799B;
+    border-bottom: solid 7px #3E799B;
+    border-right: solid 7px #E7A588;
+    border-left: solid 7px #E7A588;
+    margin: 2px #684c31;
+    height: 80vh;
+  }
+  .hero__button {
+    height: 70px;
+  }
+}
+
 /* declaro mixins que voy a usar en los distintos bodys */
 /* Empieza el body del Index */
 .bodyIndex {
@@ -340,6 +355,7 @@
   }
 }
 
+/* Empieza el body de construccion */
 .bodyConstruccion {
   padding: 50px 60px 50px 60px;
   border-top: solid 20px #E7A588;
@@ -474,6 +490,40 @@
   }
 }
 
+/* responsive de la pagina construccion */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .bodyConstruccion {
+    padding: 20px 5px 20px 5px;
+  }
+  .bodyConstruccion__section {
+    padding: 7px 7px 7px 7px;
+  }
+  .bodyConstruccion__imagen1 {
+    height: 100%;
+    width: 100%;
+  }
+  .bodyConstruccion__imagen2 {
+    height: 100%;
+    width: 100%;
+  }
+  .bodyConstruccion__imagen3 {
+    height: 100%;
+    width: 100%;
+  }
+  .bodyConstruccion__texto1 {
+    padding: 13px 13px 13px 13px;
+    font-size: 15px;
+  }
+  .bodyConstruccion__texto2 {
+    padding: 13px 13px 13px 13px;
+    font-size: 15px;
+  }
+  .bodyConstruccion__texto3 {
+    padding: 13px 13px 13px 13px;
+    font-size: 15px;
+  }
+}
+
 /* Termina el body de construccion y empieza el body de la pagina recorrido. */
 .carousel-control-prev-icon {
   background-color: black;
@@ -550,7 +600,48 @@
 }
 
 /* responsive del html recorrido */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .bodyRecorrido {
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoHoy {
+    background-color: #BB8466;
+    padding: 20px 30px 20px 30px;
+  }
+  .bodyRecorrido__recorridoFuturo {
+    padding: 20px 30px 20px 30px;
+  }
+  .bodyRecorrido__recorridoFuturo-contenedorDer {
+    padding: 15px 15px 15px 15px;
+    justify-items: center;
+  }
+  .bodyRecorrido__recorridoFuturo-titulo {
+    height: 60px;
+    text-align: center;
+    color: #BB8466;
+    font-size: 30px;
+  }
+  .bodyRecorrido__recorridoFuturo-texto {
+    margin: 0.4rem;
+    padding: 15px 15px 15px 15px;
+  }
+  .bodyRecorrido__recorridoFuturo-contenedorButton {
+    margin: 0.5rem;
+  }
+  .bodyRecorrido__recorridoFuturo-button {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    background-color: #BB8466;
+    color: #332518;
+    height: 100px;
+    width: 200px;
+  }
+}
+
 @media (max-width: 768px) {
+  .bodyRecorrido {
+    padding: 40px 50px 40px 50px;
+  }
   .bodyRecorrido__recorridoHoy {
     padding: 15px 15px 15px 15px;
   }
@@ -649,6 +740,21 @@
 }
 
 /* responsive del html mis-papas" */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .bodyPapas__belentxt {
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+  }
+  .bodyPapas__martintxt {
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+  }
+  .bodyPapas__martinybelentxt {
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .bodyPapas__belencol {
     height: 40vh;
@@ -750,6 +856,34 @@
 }
 
 /* responsive del html Viaja-conmigo */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .bodyViajarjuntos {
+    padding: 15px 15px 15px 15px;
+    border-left: #684c31 solid 20px;
+    border-right: #684c31 solid 20px;
+  }
+  .bodyViajarjuntos__rowtop {
+    padding: 15px 15px 15px 15px;
+    border-top: #3E799B solid 10px;
+    border-right: #3E799B solid 10px;
+    border-left: #3E799B solid 10px;
+  }
+  .bodyViajarjuntos__rowmid {
+    padding: 15px 15px 15px 15px;
+    border-right: #3E799B solid 10px;
+    border-left: #3E799B solid 10px;
+  }
+  .bodyViajarjuntos__rowbottom {
+    padding: 15px 15px 15px 15px;
+    border-bottom: #3E799B solid 10px;
+    border-right: #3E799B solid 10px;
+    border-left: #3E799B solid 10px;
+  }
+  .bodyViajarjuntos__txt {
+    padding: 20px 30px 20px 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .bodyViajarjuntos {
     padding: 15px 15px 15px 15px;

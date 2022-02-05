@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/Imgs/Logo.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/scss/main.css"/>
   </head>
   <body>
@@ -44,10 +44,10 @@
     <main class="main pt-3">
         <div class="main__contenedorIzq">
             <a class="main__link--izq" href="https://www.youtube.com/c/caminandoelmundo">
-                <img class="main__logo--izq" src="/Imgs/youtube-logo.png" width="40px" height="40px"/>
+                <img class="main__logo--izq" src="/Imgs/youtube-logo.png" width="40px" height="40px" alt="Youtube logo"/>
             </a>
             <a class="main__link--izq" href="https://www.facebook.com/caminandoelmundoblog">
-                <img class="main__logo--izq" src="/Imgs/facebook-logo.png" width="40px" height="40px"/>
+                <img class="main__logo--izq" src="/Imgs/facebook-logo.png" width="40px" height="40px" alt="Facebook logo"/>
             </a>
         </div>
         <div class="main__contenedorTitulo">
@@ -57,10 +57,10 @@
         </div>
         <div class="main__contenedorDer">
             <a class="main__link--der" href="https://mobile.twitter.com/caminando_mundo">
-                <img class="main__logo--der" src="/Imgs/twitter-logo.png" width="40px" height="40x"/>
+                <img class="main__logo--der" src="/Imgs/twitter-logo.png" width="40px" height="40x" alt="Twitter logo"/>
             </a>
             <a class="main__link--der" href="https://www.instagram.com/caminandoelmundo/?hl=es">
-                <img class="main__logo--der" src="/Imgs/instagram-logo.png" width="40px" height="40px"/>
+                <img class="main__logo--der" src="/Imgs/instagram-logo.png" width="40px" height="40px" alt="Instagram logo"/>
             </a>
         </div>
     </main>
@@ -78,30 +78,30 @@
                 <div class= "bodyRecorrido__recorridoHoy-imgs">
                     <div class="row">
                         <div class= "col-md-6">
-                            <img class="bodyRecorrido__recorridoHoy-Arg" src="/Imgs/recorrido-hoy.png" height="100%" width="100%">
+                            <img class="bodyRecorrido__recorridoHoy-Arg" src="/Imgs/recorrido-hoy.png" height="100%" width="100%" alt="Lo recorrido hasta hoy">
                         </div>
                         <div class="col-md-6">
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/Imgs/patagonia.jpg" alt="First slide">
+                                    <img src="/Imgs/patagonia.jpg" class="d-block w-100" alt="Patagonia">
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="/Imgs/cuyo.jpg" alt="Second slide">
+                                    <img src="/Imgs/cuyo.jpg" class="d-block w-100" alt="Cuyo">
                                   </div>
                                   <div class="carousel-item">
-                                    <img class="d-block w-100" src="/Imgs/norte.jpg" alt="Third slide">
+                                    <img src="/Imgs/norte.jpg" class="d-block w-100" alt="Norte">
                                   </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="sr-only">Next</span>
-                                </a>
-                            </div>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="bodyRecorrido__recorridoFuturo-imgs">
                     <div class="row">
                         <div class="col-md-6">
-                            <img class="bodyRecorrido__recorridoFuturo-america" src="/Imgs/El-objetivo.png" height="100%" width="100%">
+                            <img class="bodyRecorrido__recorridoFuturo-america" src="/Imgs/El-objetivo.png" height="100%" width="100%" alt="Lo que planeamos recorrer">
                         </div>
                         <div class="col-md-6">
                             <div class="bodyRecorrido__recorridoFuturo-contenedorDer">
@@ -146,9 +146,7 @@
         </div>
     </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
   <footer class="footer">
     <div class="container-fluid">
@@ -160,7 +158,7 @@
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4 text-center p-3">
                 <div class="footer__contenedorLogo">
-                    <img class="footer__logo" src="/Imgs/Logo.png" alt="Logo caminando el mundo."/>
+                    <img class="footer__logo" src="/Imgs/Logo.png" alt="Caminando el mundo logo"/>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4 text-center p-3">

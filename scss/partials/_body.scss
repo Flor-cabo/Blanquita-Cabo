@@ -140,6 +140,8 @@
       background: $piel-oscuro; } 
 }
 
+/* Empieza el body de construccion */
+
 .bodyConstruccion{
     padding: 50px 60px 50px 60px;
     border-top: solid 20px #E7A588;
@@ -273,6 +275,48 @@
         }
     }
 
+/* responsive de la pagina construccion */
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    .bodyConstruccion{
+        padding: 20px 5px 20px 5px;
+
+        &__section{
+            padding: 7px 7px 7px 7px;
+        }
+
+        &__imagen1{
+            height: 100%;
+            width:100%
+         }
+         
+         &__imagen2{
+            height: 100%;
+            width: 100%
+         }
+         
+         &__imagen3{
+            height:100%;
+            width:100%;
+         }
+         
+         &__texto1{
+            padding: 13px 13px 13px 13px;
+            font-size: 15px;
+         }
+
+         &__texto2{
+            padding: 13px 13px 13px 13px;
+            font-size: 15px;
+         }
+         
+         &__texto3{
+            padding: 13px 13px 13px 13px;
+             font-size: 15px;
+         }
+    }
+}
+
 /* Termina el body de construccion y empieza el body de la pagina recorrido. */
 
 .carousel-control-prev-icon{
@@ -343,21 +387,71 @@
 
 /* responsive del html recorrido */
 
-@media (max-width: 768px) {
-    .bodyRecorrido{
-        &__recorridoHoy{
+@media (min-width: 769px) and (max-width: 1000px) {
 
+    .bodyRecorrido{
+        padding:map-get($paddings, S);
+            
+        &__recorridoHoy{
+                background-color: $piel-oscuro;
+                padding: map-get($paddings,M);
+            }
+
+        &__recorridoFuturo{
+                padding:map-get($paddings, M);
+    
+                &-contenedorDer{
+                    padding: map-get($paddings, S);
+                    justify-items: center;
+                }
+    
+                &-titulo{
+                    height:60px;
+                    text-align: center;
+                    color: $piel-oscuro;
+                    font-size: map-get($fonts, M);
+                }
+
+                &-texto{
+                    margin:0.4rem;
+                    padding: map-get($paddings, S);
+                }
+
+                &-contenedorButton{
+                    margin:0.5rem;
+                }
+
+                &-button{
+                    justify-self:center;
+                    background-color: $piel-oscuro;
+                    color: $tostado-oscuro;
+                    height: 100px;
+                    width:200px;
+                }
+                }
+            }           
+}
+
+@media (max-width: 768px) {
+
+    .bodyRecorrido{
+        padding:map-get($paddings, L);
+
+        &__recorridoHoy{
             padding:map-get($paddings, S);
 
             &-Arg{
                 padding:map-get($paddings, S);
             }
+
             &-Carousel{
                 padding:map-get($paddings, S);
             }
         }
+
         &__recorridoFuturo{
             padding:map-get($paddings, S);
+
             &-america{
                 padding: map-get($paddings, S);
             }
@@ -437,7 +531,26 @@
     }
 /* responsive del html mis-papas" */
 
-    @media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1000px) {
+
+    .bodyPapas{
+        &__belentxt{
+            padding: map-get($paddings,XS );
+            font-size:map-get($fonts,XS );
+            }
+        &__martintxt{
+            padding: map-get($paddings,XS );
+            font-size:map-get($fonts,XS );
+            }
+        &__martinybelentxt{
+            padding: map-get($paddings,XS );
+            font-size:map-get($fonts,XS );
+            }
+    }
+
+}
+
+@media (max-width: 768px) {
 
         .bodyPapas{
             &__belencol{
@@ -541,6 +654,38 @@
 }
 
 /* responsive del html Viaja-conmigo */
+
+@media (min-width: 769px) and (max-width: 1000px) {
+    .bodyViajarjuntos{
+        padding:map-get($paddings, S);
+        border-left: map-get($borders,marron);
+        border-right: map-get($borders,marron);
+    
+        &__rowtop{
+            padding: map-get($paddings,S );
+            border-top:map-get($borders, azulchico);
+            border-right:map-get($borders, azulchico);
+            border-left:map-get($borders, azulchico);
+        }
+    
+        &__rowmid{
+            padding: map-get($paddings,S);
+            border-right:map-get($borders, azulchico);
+            border-left:map-get($borders, azulchico);
+        }
+    
+        &__rowbottom{
+            padding: map-get($paddings,S);
+            border-bottom:map-get($borders, azulchico);
+            border-right:map-get($borders, azulchico);
+            border-left:map-get($borders, azulchico);
+        }
+    
+        &__txt{
+            padding: map-get($paddings,M);
+        }
+    }
+}
 
 @media (max-width: 768px) {
     .bodyViajarjuntos{
